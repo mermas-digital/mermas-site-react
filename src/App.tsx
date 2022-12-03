@@ -10,12 +10,12 @@ import { Register } from './components/register';
 import { Fade } from 'react-awesome-reveal';
 import { Patronize } from './components/patronize';
 import Gallery from './components/gallery';
-import { useEffect, useState } from 'react';
-import GalleryGrid from './components/galleryGrid';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import GalleryPage from './components/gallerylPage';
 import GalerryId from './components/galleryId';
 import Team from './components/Team';
+import { Teams } from './page/Teams';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
       <Route path="/" element={<HomeScreen />} />
       <Route path="galeria" element={<GalleryPage />} />
       <Route path="galeria/:id" element={<GalerryId />} />
+      <Route path="equipe" element={<Teams />} />
     </Routes>
   );
 }
@@ -57,9 +58,7 @@ function HomeScreen() {
         <Fade>
           <Gallery />
         </Fade>
-        <Fade triggerOnce direction="up" delay={100}>
-          <Team />
-        </Fade>
+
         <Fade triggerOnce direction="up" delay={100}>
           <Patronize />
         </Fade>

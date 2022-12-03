@@ -4,8 +4,10 @@ import { AiOutlineClose } from 'react-icons/ai';
 import './index.css';
 interface NavbarProps {
   showGallery: boolean;
-  showGalleryEllipse: boolean;
+  showGalleryEllipse?: boolean;
 }
+
+import { Link } from 'react-router-dom';
 export const Navbar = ({
   showGallery = false,
   showGalleryEllipse = false,
@@ -41,6 +43,7 @@ export const Navbar = ({
 
   React.useEffect(() => {
     showNav();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
   return (
@@ -60,9 +63,9 @@ export const Navbar = ({
               alt="logo side"
               className="sideLogo"
             />
-            <a className="logo" href="#">
+            <Link className="logo" to="/">
               Mermãs Digitais
-            </a>
+            </Link>
           </div>
           <div className="menu">
             <ul className="group_button">
@@ -82,6 +85,9 @@ export const Navbar = ({
               </li>
               <li>
                 <a href="#register">Como participar?</a>
+              </li>
+              <li>
+                <Link to="/equipe">Equipe</Link>
               </li>
               <li>
                 <a href="#form">Contato</a>

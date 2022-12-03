@@ -1,0 +1,15 @@
+.container-team {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.content-team {
+  margin-top: 6rem;
+  width: 100%;
+}
+
+.content-footer {
+  width: 100%;
+}
