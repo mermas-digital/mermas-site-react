@@ -3,14 +3,18 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { BsFacebook, BsTwitter } from 'react-icons/bs';
 import './index.css';
 
-export const Footer = () => {
+interface FooterProps {
+  pathImage?: string;
+}
+
+export const Footer = ({ pathImage = './image/girls.png' }: FooterProps) => {
   return (
     <footer className="delay">
       <div id="help" className="container delay_distance">
         <div>
           <div id="logo-footer">
             <img
-              src="./image/girls.png"
+              src="../../../public/image/girls.png"
               alt="Logo do projeto Mermãs Digitais: quatro meninas com características diferentes"
             />
             <h3>

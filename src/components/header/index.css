@@ -1,15 +1,20 @@
-.container {
+.header > .containerNavbar {
   width: 100%;
-  max-width: 75rem;
+  min-width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .header {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0rem;
   transition: all 0.5s ease;
   z-index: 100;
   background: transparent;
@@ -42,7 +47,7 @@
   background-color: var(--white-color);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid #e4e4e4;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0rem;
 }
 
 .elipse2 {
@@ -57,14 +62,25 @@
   z-index: 1;
 }
 
+.elipse3 {
+  background: url('../../../public/image/EllipseGallery.svg') no-repeat center;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  width: 822.41px;
+  height: 850.19px;
+  right: 0px;
+  top: -59.06px;
+  z-index: 1;
+}
 .header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0rem;
   background: transparent;
 }
 .header nav .toggle {
@@ -80,6 +96,7 @@
   align-items: center;
   gap: 1rem;
 }
+
 .header nav .menu ul li a {
   font: 400 0.75rem var(--body-font);
   color: var(--base-color-dark);
@@ -89,6 +106,7 @@
   border-radius: 2rem;
   -webkit-font-smoothing: antialiased;
   transition: 0.3s;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
 }
 .header nav .menu ul li a.title.active {
   font-weight: bold;
@@ -105,13 +123,26 @@
   color: var(--base-color-dark);
 }
 
+.header nav .menu ul li .link:hover,
 .header nav ul li a:hover,
 .header nav ul li a.active {
   background-color: var(--base-color-light);
 }
+.header .containerNavbar .containerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 0;
+  gap: 1.5rem;
+
+  background: transparent;
+}
 .logo {
   font: 400 1rem var(--logo-font);
-  color: var(--white-color);
+  color: #330043;
+  transition: 0.3s;
 
   text-transform: uppercase;
   position: relative;
@@ -122,11 +153,18 @@
   content: '';
   width: 125%;
   height: 1px;
-  background: var(--white-color);
+  background: #330043;
+  transition: 0.3s;
 
   position: absolute;
   left: 0;
   bottom: -0.5rem;
+}
+
+.sideLogo {
+  object-fit: contain;
+  width: 20%;
+  height: 20%;
 }
 .header.scroll .logo {
   color: var(--base-color);
@@ -167,6 +205,109 @@
   }
   .header nav .menu ul li a {
     padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 971px) {
+  .header > .containerNavbar {
+    /* width: 100%;
+  min-width: 100%;
+  margin: 0 auto;
+  display: flex; */
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logo {
+    font-size: 00.875rem;
+  }
+
+  .header nav .toggle {
+    display: inline-block;
+  }
+
+  .header nav .menu {
+    opacity: 0;
+    visibility: hidden;
+    top: -20rem;
+    border-radius: 0.75rem 0 0 0.75rem;
+    transition: all 0.5s ease;
+  }
+
+  .header nav .menu ul {
+    display: none;
+  }
+  .header nav.show .menu {
+    opacity: 1;
+    visibility: visible;
+
+    background: var(--white-color);
+
+    width: 16rem;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: grid;
+    place-content: center left;
+  }
+  .header nav.show .menu ul {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .header nav.show .menu ul li a {
+    padding: 1rem 2rem;
+    display: inline-block;
+    height: 100%;
+    border-radius: 0 2rem 2rem 0;
+    box-shadow: none;
+    font-size: 1rem;
+  }
+
+  .header nav.show ul.grid {
+    gap: 0rem;
+  }
+
+  /* toggle menu */
+  .toggle {
+    color: var(--base-color);
+    font-size: 1.875rem;
+    cursor: pointer;
+  }
+
+  .header nav .icon-close {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+
+    transition: 0.2s;
+  }
+
+  .header nav.show div.icon-close {
+    visibility: visible;
+    opacity: 1;
+    top: 1.25rem;
+  }
+  .elipse1 {
+    width: 250.26px;
+    height: 262.28px;
+    left: -42px;
+    top: -103px;
+  }
+  .elipse2 {
+    width: 350.26px;
+    height: 362.28px;
+    right: 82px;
+    top: 103px;
   }
 }
 

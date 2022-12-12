@@ -1,0 +1,582 @@
+.containerAllGallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.containerAllGallery > .containerRowGalleryId {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  margin-top: 7rem;
+}
+.containerAllGallery > .containerRowGalleryId > .containerColumnContentL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .dateGallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  z-index: 1;
+}
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .dateGallery
+  > p {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #545454;
+
+  margin-left: 0.5rem;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .titleGallery {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  display: flex;
+  align-items: flex-start;
+  color: #ff4a97;
+  flex: none;
+  flex-grow: 0;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .line {
+  width: 50%;
+  height: 0.1rem;
+  border: 1px solid #545454;
+  margin: 2rem 0rem 2rem 0rem;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .textDescriptionGalery {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 20px;
+  color: #545454;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .containerButtonGallery {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .containerButtonGallery
+  > .backgroundButtonGallery {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentL
+  > .containerButtonGallery
+  > .textButtonGallery {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  color: #330043;
+  flex: none;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.containerAllGallery > .containerRowGalleryId > .containerColumnContentR {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentR
+  > .containerImageGallery {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 0 2rem;
+}
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentR
+  > .containerImageGallery
+  > img {
+  width: 706px;
+  height: 424px;
+  /* height: 370px; */
+  object-fit: cover;
+
+  border-radius: 1rem;
+
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 2rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+
+  -webkit-transition: all 0.3s ease-in-out;
+
+  -moz-transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentR
+  > .buttonShareGallery {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentR
+  > .boxRowButtons
+  > .buttonBorder {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.containerAllGallery
+  > .containerRowGalleryId
+  > .containerColumnContentR
+  > .boxRowButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 0 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* .containerAllGallery > .elipseGallery { */
+/* background: url('../../../public/image/EllipseGallery.svg') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  width: 622.41px;
+  height: 800.19px;
+  right: 0;
+  top: 0px;
+  object-fit: contain; */
+/* width: 100%;
+  height: 100%; */
+/* z-index: 999; */
+/* } */
+
+.containerAllGallery > .popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 0, 67, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 3s ease-in-out;
+  -webkit-transition: all 3s ease-in-out;
+}
+
+.containerAllGallery > .popupContainer > .popupClose {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 9px transparent;
+  align-self: flex-end;
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.containerAllGallery > .popupContainer > .buttonPopupRight {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.containerAllGallery > .popupContainer > .buttonPopupLeft {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.containerAllGallery > .popupContainer > img {
+  width: 80rem;
+
+  object-fit: cover;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+  border-radius: 35px;
+  z-index: 998;
+}
+.containerFooterGallery {
+  width: 100%;
+}
+
+/* @media (max-width: 768px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 1281px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 50rem;
+  }
+
+  .containerAllGallery > .popupContainer > .popupClose {
+    top: 12%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 50rem;
+  }
+
+  .containerAllGallery > .popupContainer > .popupClose {
+    top: 5%;
+    right: 5%;
+  }
+  .containerAllGallery > .popupContainer > .buttonPopupLeft {
+    left: 2%;
+  }
+  .containerAllGallery > .popupContainer > .buttonPopupRight {
+    right: 2%;
+  }
+} */
+
+/* @media (max-width: 414px) {
+  .containerAllGallery
+    > .containerRowGalleryId
+    > .containerColumnContentR
+    > .containerImageGallery
+    > img {
+    width: 100%;
+  }
+  .containerAllGallery > .popupContainer {
+    flex-direction: column;
+    background-color: black;
+    width: 50%;
+    height: 50%;
+  }
+  .containerAllGallery > .popupContainer > img {
+    width: 10rem;
+  } */
+/*
+  .containerAllGallery > .popupContainer > .popupClose {
+    top: 0%;
+    right: 0%;
+  }
+  .containerAllGallery > .popupContainer > .buttonPopupLeft {
+    bottom: 0%;
+  }
+  .containerAllGallery > .popupContainer > .buttonPopupRight {
+    bottom: 0%;
+  } */
+/* } */
+
+@media (max-width: 1801px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 1205px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 811px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 90%;
+  }
+
+  .containerAllGallery > .popupContainer > .buttonPopupRight {
+    top: 65%;
+    right: 10%;
+  }
+
+  .containerAllGallery > .popupContainer > .buttonPopupLeft {
+    top: 65%;
+    left: 10%;
+  }
+  .containerAllGallery > .popupContainer > .popupClose {
+    top: 20%;
+  }
+}
+
+@media (width: 810px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 70%;
+  }
+  .containerAllGallery > .popupContainer > .buttonPopupRight {
+    top: 50%;
+    right: 0%;
+  }
+
+  .containerAllGallery > .popupContainer > .buttonPopupLeft {
+    top: 50%;
+    left: 0%;
+  }
+  .containerAllGallery > .popupContainer > .popupClose {
+    top: 20%;
+  }
+}
+@media (max-width: 429px) {
+  .containerAllGallery > .popupContainer > img {
+    width: 90%;
+  }
+
+  .containerAllGallery > .popupContainer > .popupClose {
+    top: 30%;
+  }
+}
+
+@media (max-width: 376px) {
+  .containerAllGallery > .popupContainer > .popupClose {
+    top: 25%;
+  }
+}
+
+@media (max-width: 811px) {
+  /* .containerAllGallery
+    > .containerRowGalleryId
+    > .containerColumnContentR
+    > .containerImageGallery
+    > img {
+    width: 300px;
+    height: 270px;
+    object-fit: cover;
+    box-shadow: 0px 0px 9px transparent;
+  } */
+  .containerAllGallery > .containerRowGalleryId {
+    flex-direction: column;
+  }
+  .containerAllGallery > .containerRowGalleryId > .containerColumnContentR {
+    order: 1;
+  }
+  .containerAllGallery > .containerRowGalleryId > .containerColumnContentL {
+    order: 0;
+  }
+}
+
+@media (max-width: 737px) {
+  .containerAllGallery
+    > .containerRowGalleryId
+    > .containerColumnContentR
+    > .boxRowButtons
+    > .buttonBorder {
+    margin-right: 1rem;
+  }
+  .containerAllGallery
+    > .containerRowGalleryId
+    > .containerColumnContentR
+    > .boxRowButtons {
+    margin-top: 1rem;
+    padding: 0 0rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .containerAllGallery
+    > .containerRowGalleryId
+    > .containerColumnContentR
+    > .buttonShareGallery {
+    margin-bottom: 1rem;
+  }
+
+  .containerAllGallery
+    > .containerRowGalleryId
+    > .containerColumnContentR
+    > .containerImageGallery {
+    padding: 0 0rem;
+  }
+  .containerAllGallery
+    > .containerRowGalleryId
+    > .containerColumnContentR
+    > .containerImageGallery
+    > img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    box-shadow: 0px 0px 9px transparent;
+  }
+  .containerAllGallery > .containerRowGalleryId {
+    flex-direction: column;
+  }
+  .containerAllGallery > .containerRowGalleryId > .containerColumnContentR {
+    order: 1;
+  }
+  .containerAllGallery > .containerRowGalleryId > .containerColumnContentL {
+    order: 0;
+  }
+}
+
+@media (max-width: 415px) {
+  .containerAllGallery > .containerRowGalleryId {
+    flex-direction: column;
+  }
+  .containerAllGallery > .containerRowGalleryId > .containerColumnContentR {
+    order: 1;
+  }
+  .containerAllGallery > .containerRowGalleryId > .containerColumnContentL {
+    order: 0;
+  }
+}

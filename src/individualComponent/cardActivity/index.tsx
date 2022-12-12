@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './index.module.css';
 
 export const CardActivity = ({
@@ -13,6 +14,7 @@ export const CardActivity = ({
   description: string;
   button: string;
 }) => {
+  const navigate = useNavigate();
   return (
     <div className={styles.box}>
       <div className={styles.box_head}>
@@ -25,7 +27,7 @@ export const CardActivity = ({
         <p>{description}</p>
       </div>
       <div className={styles.box_button}>
-        <button>{button}</button>
+        <button onClick={() => navigate('/atividades')}>{button}</button>
       </div>
     </div>
   );

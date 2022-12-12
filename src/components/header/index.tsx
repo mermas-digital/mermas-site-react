@@ -1,11 +1,25 @@
 import React, { useCallback, useRef } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import './index.css';
-export const Navbar = () => {
+interface NavbarProps {
+  showGallery?: boolean;
+  showGalleryEllipse?: boolean;
+}
+export const Navbar = ({
+  showGallery = false,
+  showGalleryEllipse = false,
+}: NavbarProps) => {
   const [show, setShow] = React.useState(false);
-  const navRef = useRef(null);
-  const headerRef = useRef(null);
+  const navRef = useRef<
+    HTMLDivElement & {
+      style: {
+        transform: string;
+      };
+    }
+  >(null);
+  const headerRef = useRef<HTMLHeadElement>(null);
 
   const showMenu = () => {
     setShow(!show);
@@ -34,17 +48,56 @@ export const Navbar = () => {
 
   React.useEffect(() => {
     showNav();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
+
+  const redirectCorrect = (section: string) => {
+    if (
+      window.location.href.split('/').length < 5 &&
+      window.location.href.split('/')[3] !== '#'
+    ) {
+      window.location.href = window.location.href.replace(
+        window.location.href.split('/')[3],
+        `#${section}`,
+      );
+    } else if (
+      window.location.href.split('/').length === 5 &&
+      window.location.href.split('/')[3] !== '#'
+    ) {
+      const firstReplace = window.location.href.replace(
+        window.location.href.split('/')[3],
+        `#${section}`,
+      );
+
+      const secondReplace = firstReplace.replace(
+        `/${firstReplace.split('/')[4]}`,
+        '',
+      );
+      window.location.href = secondReplace;
+    }
+  };
 
   return (
     <>
-      <div className="elipse1" />
-      <div className="elipse2" />
+      {showGalleryEllipse && (
+        <>
+          <div className="elipse1" />
+          <div className="elipse2" />
+        </>
+      )}
+      {showGalleryEllipse && <div className="elipse3" />}
       <header className="header" ref={headerRef}>
-        <nav className="container delay_500" ref={navRef}>
-          <a className="logo" href="#">
-            Mermãs Digitais
-          </a>
+        <nav className="containerNavbar delay_500" ref={navRef}>
+          <div className="containerLogo">
+            <img
+              src="../../../public/image/sideLogo.png"
+              alt="logo side"
+              className="sideLogo"
+            />
+            <a className="logo" href="#">
+              Mermãs Digitais
+            </a>
+          </div>
           <div className="menu">
             <ul className="group_button">
               <li>
@@ -53,19 +106,30 @@ export const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="#about">Sobre</a>
+                <a onClick={() => redirectCorrect('about')}>Sobre</a>
+              </li>
+
+              <li>
+                <a onClick={() => redirectCorrect('course')}>Projeto</a>
               </li>
               <li>
-                <a href="#course">Projeto</a>
+                <a onClick={() => redirectCorrect('activity')}>Atividades</a>
               </li>
               <li>
-                <a href="#activity">Atividades</a>
+                <a onClick={() => redirectCorrect('register')}>
+                  Como participar?
+                </a>
               </li>
               <li>
-                <a href="#register">Como participar?</a>
+                <Link className="link" to="/time">
+                  Equipe
+                </Link>
               </li>
               <li>
-                <a href="#form">Contato</a>
+                <a onClick={() => redirectCorrect('form')}>Contato</a>
+              </li>
+              <li>
+                <a onClick={() => redirectCorrect('gallery')}>Galeria</a>
               </li>
             </ul>
           </div>

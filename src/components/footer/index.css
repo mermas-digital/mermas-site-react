@@ -1,6 +1,6 @@
 footer {
   background-color: var(--base-color-light);
-  width: 100%;
+  /* width: 100%; */
 }
 footer #help {
   padding: 4rem 0 1.5rem 0;

@@ -88,10 +88,8 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
   width: 100%;
-  background-color: #ffffff;
-  /* padding: 0 22rem; */
+
   margin-top: 10rem;
   overflow: hidden;
 }
@@ -101,4 +99,7 @@ li {
   z-index: 2;
 
   overflow: hidden;
+}
+.body_complete > .containerFooter {
+  width: 100%;
 }
